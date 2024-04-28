@@ -3,13 +3,18 @@ html {
     height: 100%;
 }
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     margin: 0;
     padding: 0;
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+body,
+button, input, textarea {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
 }
 
 /* Page layout (central column) */
@@ -114,13 +119,15 @@ footer .page-content {
 
 /* page navs */
 
-main nav a {
+main nav a,
+.btn-primary {
     display: inline-block;
     background-color: #52a075;
     padding: 0.5rem;
     color: #fff;
     text-decoration: none;
     border-radius: 1rem;
+    border: none;
 }
 
 main nav a:hover {
