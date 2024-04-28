@@ -149,7 +149,7 @@ main nav.back a::before {
 
 /* Headers reset */
 h1 {
-    font-size: 36px;
+    font-size: 2rem;
     text-transform: uppercase;
 }
 
