@@ -1,6 +1,159 @@
+/* RESETS */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-img {
-    width: 100vh;
+
+/* Page layout (central column) */
+main,
+header,
+footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.app-bar,
+.page-content
+{
+    width: 1024px;
+    
+}
+.page-content {
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+main {
+    background-color: #edf6f0;
+    min-height: calc(100vh - 100px);
+}
+
+/* header styling */
+
+header {
+    background-color: #52a075;
+}
+header .app-bar {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+header .logo {
+    display: block;
+    height: 100%;
+}
+
+header .logo img {
+    height: 100%;
+    width: auto;
+    padding: 0.5rem;
+    padding-left: 0;
+    box-sizing: border-box;
+}
+
+header nav.primary {
+    margin-left: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+header nav.primary a {
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: rgba(255,255,255,0.6);
+    margin-right: 1rem;
+    color: #336348;
+    text-decoration: none;
+}
+
+header nav.primary a:hover {
+    text-decoration: underline;
+}
+
+header nav.primary a.current {
+    background-color: #FFF;
+    font-weight: bold;
+}
+
+/* PAGE STYLING */
+main > img.main {
+    width: 100%;
+}
+
+aside {
+    width: calc((100% - 1024px) / 2);
+    height: 300px;
+    background-color: #d18e8e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* page navs */
+
+main nav a {
+    display: inline-block;
+    background-color: #52a075;
+    padding: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+main nav a:hover {
+    text-decoration: underline;
+}
+
+main nav ul {
+    padding-left: 0;
+}
+
+main nav li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+main nav.back a::before {
+    content: '‹ '
+}
+
+/* Headers reset */
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Table styling */
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table th {
+    background-color: rgb(41, 172, 41);
+    color: #fff;
+}
+
+table th,
+table td {
+    border: 1px solid green;
+    padding: 1rem;
 }
