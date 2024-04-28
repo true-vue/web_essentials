@@ -1,8 +1,15 @@
 /* RESETS */
+html {
+    height: 100%;
+}
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 /* Page layout (central column) */
@@ -26,7 +33,7 @@ footer {
 }
 main {
     background-color: #edf6f0;
-    min-height: calc(100vh - 100px);
+    flex-grow: 1;
 }
 
 /* header styling */
@@ -82,7 +89,7 @@ main > img.main {
     width: 100%;
 }
 
-aside {
+/* aside {
     width: calc((100% - 1024px) / 2);
     height: 300px;
     background-color: #d18e8e;
@@ -90,6 +97,19 @@ aside {
     top: 0;
     left: 0;
     z-index: 1;
+} */
+
+/* footer */
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #5f8171;
+    color: white;
+}
+
+footer .page-content {
+    background-color: transparent;
+    color: #FFF;    
 }
 
 /* page navs */
