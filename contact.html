@@ -80,15 +80,6 @@
       </address>
       <form method="post" action="http://localhost:3000">
         <div class="form-control">
-          <label for="topic">W jakiej sprawie się kontaktujesz</label>
-          <select name="topic" id="topic">
-            <option value="cooperation">Współpraca</option>
-            <option value="error">Zgłoszenie błędu</option>
-            <option value="abuse">Nadużycie</option>
-            <option value="inne">Inny...</option>
-          </select>
-        </div>
-        <div class="form-control">
           <label for="message">Twoja wiadomość</label>
           <textarea name="message" id="message"></textarea>
         </div>
@@ -99,10 +90,6 @@
         <div class="form-control">
           <label for="email">Adres email (kontakt zwrotny)</label>
           <input name="email" id="email" type="text" />
-        </div>
-        <div class="form-control">
-          <label for="rules">Akceptuję regulamin i zasady RODO</label>
-          <input name="rules" id="rules" type="checkbox" />
         </div>
         <button type="submit" class="btn-primary">Wyślij</button>
       </form>
