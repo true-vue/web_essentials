@@ -27,13 +27,22 @@
     }
 
     .form-control textarea,
-    .form-control input {
+    .form-control input,
+    .form-control select {
       width: 100%;
       border: 2px solid green;
       background-color: #eee;
       padding: 0.5rem;
       margin-top: 0.25rem;
       box-sizing: border-box;
+    }
+
+    .form-control input[type="checkbox"] {
+      width: auto;
+    }
+
+    input[type="checkbox"]+label {
+      display: inline-block;
     }
 
     .form-control textarea {
@@ -50,13 +59,17 @@
       display: block;
       min-width: 200px;
     }
+
+    label {
+      cursor: pointer;
+    }
   </style>
 </head>
 
 <body>
   <header>
     <div class="app-bar">
-      <a class="logo">
+      <a class="logo" href="/">
         <img src="/img/logo-zus-info-hub.png" alt="ZUS INFO HUB logo" />
       </a>
       <div class="app-title"></div>
@@ -80,6 +93,15 @@
       </address>
       <form method="post" action="http://localhost:3000">
         <div class="form-control">
+          <label for="topic">W jakiej sprawie się kontaktujesz</label>
+          <select name="topic" id="topic">
+            <option value="cooperation">Współpraca</option>
+            <option value="error">Zgłoszenie błędu</option>
+            <option value="abuse">Nadużycie</option>
+            <option value="inne">Inny...</option>
+          </select>
+        </div>
+        <div class="form-control">
           <label for="message">Twoja wiadomość</label>
           <textarea name="message" id="message"></textarea>
         </div>
@@ -90,6 +112,10 @@
         <div class="form-control">
           <label for="email">Adres email (kontakt zwrotny)</label>
           <input name="email" id="email" type="text" />
+        </div>
+        <div class="form-control">
+          <input name="rules" id="rules" type="checkbox" />
+          <label for="rules">Akceptuję regulamin i zasady RODO</label>
         </div>
         <button type="submit" class="btn-primary">Wyślij</button>
       </form>

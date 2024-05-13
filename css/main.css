@@ -12,9 +12,17 @@ body {
     height: 100%;
 }
 body,
-button, input, textarea {
+button, input, textarea, select {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
+}
+a {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Page layout (central column) */
